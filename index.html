@@ -204,7 +204,7 @@
         <h2 class="titleText"><span>C</span>ontact</h2>
         <p>Don't believe Michael Jordan is the G.O.A.T? Let's debate!</p>
       </div>
-      <form class="contactForm" onsubmit="onSubmit(event)">
+      <form id="contactForm" class="contactForm" onsubmit="onSubmit(event)">
         <h3>Send Message</h3>
         <div class="inputBox">
           <input type="text" placeholder="Name" name="name" required />
@@ -256,6 +256,7 @@
 
       function validateForm() {
         var nameElement = document.forms["contactForm"]["name"];
+
         var emailElement = document.forms["contactForm"]["email"];
         var messageElement = document.forms["contactForm"]["message"];
 
@@ -298,7 +299,7 @@
       }
 
       function submitForm() {
-        var formData = new FormData(document.forms["contactForm"]);
+        var formData = new FormData(document.getElementById("contactForm"));
 
         // Use the Formspree API endpoint directly
         fetch("https://formspree.io/api/v1/f/xyyqqqdj", {
