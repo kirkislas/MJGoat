@@ -507,8 +507,6 @@ section {
   }
   iframe {
     position: relative;
-    display: flex;
-    align-items: center;
     width: 100%;
     margin: 0 auto;
     transform: scale(0.8);
