@@ -505,7 +505,7 @@ section {
   }
   iframe {
     position: relative;
-    width: 70%;
+    width: 50%;
     margin-left: -20px;
   }
 }
