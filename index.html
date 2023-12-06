@@ -225,6 +225,7 @@
         <div class="inputBox">
           <input type="submit" value="Send" />
         </div>
+        <p id="formStatus"></p>
       </form>
     </section>
 
@@ -285,9 +286,9 @@
       }
 
       function onSubmit(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the default form submission
 
-        // Perform reCAPTCHA validation
+        // Perform reCAPTCHA validation and form validation as before
         var recaptchaResponse = grecaptcha.getResponse();
         if (!recaptchaResponse) {
           alert("Please complete the reCAPTCHA challenge.");
@@ -295,35 +296,41 @@
         }
 
         if (validateForm()) {
-          // If the form is validated, submit the form
-          submitForm();
+          // If the form is validated, submit the form with AJAX
+          handleSubmit(event);
         }
       }
 
-      function submitForm() {
-        var formData = new FormData(document.getElementById("contactForm"));
+      async function handleSubmit(event) {
+        var status = document.getElementById("my-form-status"); // Make sure you have this element in your HTML
+        var data = new FormData(event.target);
 
-        fetch("https://formspree.io/api/v1/f/xyyqqqdj", {
+        fetch(event.target.action, {
           method: "POST",
+          body: data,
           headers: {
             Accept: "application/json",
           },
-          body: formData,
         })
           .then((response) => {
             if (response.ok) {
-              return response.json();
+              status.innerHTML = "Thanks for your submission!";
+              document.getElementById("contactForm").reset(); // Reset the form after successful submission
             } else {
-              throw new Error("Network response was not ok.");
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML =
+                    "Oops! There was a problem submitting your form";
+                }
+              });
             }
           })
-          .then((data) => {
-            // Handle the response (e.g., display a success message)
-            console.log(data);
-          })
           .catch((error) => {
-            // Handle the error (e.g., display an error message)
-            console.error("Form submission failed: ", error);
+            status.innerHTML = "Oops! There was a problem submitting your form";
           });
       }
 

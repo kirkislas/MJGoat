@@ -383,6 +383,12 @@ section {
   margin: 0 auto;
 }
 
+#formStatus {
+  color: #d9534f;
+  margin-top: 10px;
+  height: 20px;
+}
+
 @media (max-width: 991px) {
   header,
   header.sticky {
