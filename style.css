@@ -506,6 +506,7 @@ section {
   iframe {
     width: 100%;
     margin: 0 auto;
-    transform: scale(0.8);
+    transform: scale(0.75);
+    margin-left: -20px;
   }
 }
