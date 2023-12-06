@@ -508,8 +508,4 @@ section {
     margin: 0 auto;
     transform: scale(0.8);
   }
-  .contactForm {
-    display: flex;
-    align-items: center;
-  }
 }
