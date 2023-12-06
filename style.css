@@ -504,12 +504,8 @@ section {
     margin: 0 auto;
   }
   iframe {
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.9);
-    transform-origin: 50% 50%;
-    min-height: 78px;
-    border: none;
-    overflow: hidden;
+    position: relative;
+    width: 70%;
+    margin-left: -20px;
   }
 }
