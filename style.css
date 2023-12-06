@@ -378,6 +378,12 @@ section {
   text-decoration: none;
 }
 
+.g-recaptcha {
+  transform: scale(0.9);
+  transform-origin: 0 0;
+  margin: 0 auto;
+}
+
 @media (max-width: 991px) {
   header,
   header.sticky {
@@ -493,5 +499,10 @@ section {
   .banner .content h2 {
     font-size: 2.2em;
     color: #fff;
+  }
+  .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+    margin: 0 auto;
   }
 }
