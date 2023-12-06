@@ -319,6 +319,35 @@
             showError("Form submission failed. Please try again.");
           });
       }
+      document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll("video");
+
+        videos.forEach(function (video) {
+          // Set attributes for autoplay, muted, and loop
+          video.setAttribute("autoplay", "");
+          video.setAttribute("muted", "");
+          video.setAttribute("loop", "");
+
+          // Play the video
+          video
+            .play()
+            .then(() => {
+              console.log("Autoplay started!");
+            })
+            .catch((error) => {
+              console.error("Error trying to autoplay video: ", error);
+            });
+
+          // Optional: Add event listener for clicking the video to play/pause
+          video.addEventListener("click", function () {
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
