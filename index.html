@@ -264,7 +264,6 @@
 
       function validateForm() {
         var nameElement = document.forms["contactForm"]["name"];
-
         var emailElement = document.forms["contactForm"]["email"];
         var messageElement = document.forms["contactForm"]["message"];
 
@@ -282,12 +281,28 @@
           return false;
         }
 
-        return true; // form is valid
+        // Define an array of prohibited words
+        var prohibitedWords = ["Lebron", "James"]; // Replace with your actual prohibited words
+
+        // Function to check for prohibited words
+        function containsProhibitedWord(fieldValue) {
+          return prohibitedWords.some((prohibitedWord) =>
+            fieldValue.toLowerCase().includes(prohibitedWord.toLowerCase())
+          );
+        }
+
+        // Check each field for prohibited words
+        if ([name, email, message].some(containsProhibitedWord)) {
+          showError("Sorry, Lebron submissions are strictly prohibited");
+          return false;
+        }
+
+        return true; // Form is valid
       }
 
       function showError(message) {
-        // You can implement your preferred way of displaying error messages (e.g., alert, modal, dynamic element)
-        alert(message);
+        var status = document.getElementById("formStatus");
+        status.innerHTML = message;
       }
 
       function onSubmit(event) {
