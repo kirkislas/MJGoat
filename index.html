@@ -322,7 +322,6 @@
       }
 
       async function handleSubmit(event) {
-        event.preventDefault();
         var status = document.getElementById("formStatus");
         var data = new FormData(event.target);
 
@@ -364,7 +363,20 @@
 
       document
         .getElementById("contactForm")
-        .addEventListener("submit", handleSubmit);
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var recaptchaResponse = grecaptcha.getResponse();
+          if (!recaptchaResponse) {
+            alert("Please complete the reCAPTCHA challenge.");
+            return;
+          }
+
+          // Perform form validation
+          if (validateForm()) {
+            // If the form is validated, submit the form with AJAX
+            handleSubmit(event);
+          }
+        });
 
       document.addEventListener("DOMContentLoaded", function () {
         const videos = document.querySelectorAll("video");
