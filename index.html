@@ -307,7 +307,8 @@
       }
 
       async function handleSubmit(event) {
-        var status = document.getElementById("formStatus"); // Make sure you have this element in your HTML
+        event.preventDefault();
+        var status = document.getElementById("formStatus");
         var data = new FormData(event.target);
 
         fetch(event.target.action, {
@@ -320,24 +321,35 @@
           .then((response) => {
             if (response.ok) {
               status.innerHTML = "Thanks for your submission!";
-              document.getElementById("contactForm").reset(); // Reset the form after successful submission
+              event.target.reset();
             } else {
-              response.json().then((data) => {
-                if (Object.hasOwn(data, "errors")) {
-                  status.innerHTML = data["errors"]
-                    .map((error) => error["message"])
-                    .join(", ");
-                } else {
+              response
+                .json()
+                .then((data) => {
+                  if (data.errors) {
+                    status.innerHTML = data.errors
+                      .map((error) => error.message)
+                      .join(", ");
+                  } else {
+                    status.innerHTML =
+                      "Oops! There was a problem submitting your form";
+                  }
+                })
+                .catch(() => {
+                  // If there's an error in parsing JSON
                   status.innerHTML =
                     "Oops! There was a problem submitting your form";
-                }
-              });
+                });
             }
           })
           .catch((error) => {
             status.innerHTML = "Oops! There was a problem submitting your form";
           });
       }
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", handleSubmit);
 
       document.addEventListener("DOMContentLoaded", function () {
         const videos = document.querySelectorAll("video");
