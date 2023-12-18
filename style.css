@@ -184,7 +184,8 @@ section {
 .rings .content .box .imgBx {
   position: relative;
   width: 100%;
-  height: 300px;
+  padding-top: 56.25%;
+  height: 0;
 }
 
 .rings .content .box .imgBx img {
@@ -505,6 +506,18 @@ p#formStatus {
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 768px) {
+  .rings .content .box {
+    width: auto;
+    margin: 10px;
+  }
+
+  .rings .content .box .imgBx img {
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 480px) {
   .banner .content h2 {
     font-size: 2.2em;
