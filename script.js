@@ -144,3 +144,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Get all images with the class 'modalImage'
+var images = document.getElementsByClassName("modalImage");
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - the image tag for the popup
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Loop through all images and bind onclick event
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  img.onclick = function (evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt; // You can set the 'alt' attribute on your images if you want to use it as a caption
+  };
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
