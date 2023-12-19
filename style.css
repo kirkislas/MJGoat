@@ -175,8 +175,8 @@ section {
 }
 
 .rings .content .box {
-  width: 340px;
-  margin: 20px;
+  width: 250px;
+  margin: 15px;
   border: 15px solid #fff;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
 }
@@ -184,8 +184,7 @@ section {
 .rings .content .box .imgBx {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;
-  height: 0;
+  height: 300px;
 }
 
 .rings .content .box .imgBx img {
@@ -504,17 +503,6 @@ p#formStatus {
     padding: 35px 40px;
     margin-top: 20px;
     margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .rings .content .box {
-    width: auto;
-    margin: 10px;
-  }
-
-  .rings .content .box .imgBx img {
-    object-fit: contain;
   }
 }
 
