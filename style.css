@@ -568,4 +568,8 @@ p#formStatus {
     font-size: 2.2em;
     color: #fff;
   }
+  .g-recaptcha {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+  }
 }
