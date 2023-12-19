@@ -572,4 +572,7 @@ p#formStatus {
     transform: scale(0.77);
     transform-origin: 0 0;
   }
+  iframe {
+    transform: scale(0.7);
+  }
 }
