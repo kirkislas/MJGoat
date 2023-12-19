@@ -157,21 +157,30 @@ var span = document.getElementsByClassName("close")[0];
 
 // Loop through all images and bind the click event
 document.querySelectorAll(".modalImage").forEach(function (img) {
-  img.onclick = function () {
+  img.addEventListener("click", function () {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt; // Use the 'alt' attribute as the caption
-  };
+  });
 });
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+// Function to close the modal
+function closeModal() {
   modal.style.display = "none";
-};
+}
+
+// When the user clicks on <span> (x), close the modal
+span.addEventListener("click", closeModal);
+span.addEventListener("touchstart", closeModal);
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    closeModal();
   }
-};
+});
+window.addEventListener("touchstart", function (event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+});
