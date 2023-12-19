@@ -576,5 +576,6 @@ p#formStatus {
   iframe {
     transform: scale(0.7);
     margin: 0 auto;
+    margin-left: 70px;
   }
 }
