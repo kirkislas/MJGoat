@@ -38,7 +38,7 @@ p {
 .banner .content p {
   font-size: 1.5em;
   color: #fff;
-  margin-bottom: 35px;
+  margin-bottom: 55px;
 }
 
 header {
@@ -564,10 +564,5 @@ p#formStatus {
     -webkit-transform: scale(0.77);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
-  }
-  .banner .content p {
-    font-size: 1.5em;
-    color: #fff;
-    margin-bottom: 60px;
   }
 }
