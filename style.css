@@ -125,7 +125,7 @@ section {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -220px; /* Adjust this value as needed */
+  bottom: -180px; /* Adjust this value as needed */
   left: 0;
   right: 0;
 }
