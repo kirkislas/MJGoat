@@ -125,7 +125,7 @@ section {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -165px; /* Adjust this value as needed */
+  bottom: -155px; /* Adjust this value as needed */
   left: 0;
   right: 0;
 }
@@ -153,10 +153,6 @@ section {
   60% {
     transform: translateY(3px);
   }
-}
-
-.downArrow svg {
-  fill: #ce1141;
 }
 
 .titleText {
