@@ -122,7 +122,7 @@ section {
   font-weight: 300;
 }
 
-.about .row .col50 {
+.about .row .col50 .titleText h2 {
   align-items: center;
 }
 
