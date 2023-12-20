@@ -173,6 +173,9 @@ function closeModal() {
 span.addEventListener("click", closeModal);
 span.addEventListener("touchstart", closeModal);
 
+// When the user clicks on the modal image, close the modal
+modalImg.addEventListener("click", closeModal);
+
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function (event) {
   if (event.target == modal) {
