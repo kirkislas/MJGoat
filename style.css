@@ -130,13 +130,13 @@ section {
   right: 0;
 }
 
-.banner .content .downArrow img {
+.banner .content .downArrow svg {
   height: 40px;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
   padding: 0; /* Remove any padding */
   border: none; /* Remove any border */
-  fill: #ce1141;
+  /* fill: #ce1141;*/
 }
 
 @keyframes animateDown {
@@ -153,6 +153,10 @@ section {
   60% {
     transform: translateY(3px);
   }
+}
+
+.downArrow svg {
+  fill: #ce1141;
 }
 
 .titleText {
