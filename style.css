@@ -8,6 +8,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   font-weight: 300;
   color: #111;
