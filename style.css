@@ -24,6 +24,10 @@ p {
   background-size: cover;
 }
 
+.content {
+  margin-top: -100px;
+}
+
 .banner .content {
   max-width: 900px;
   text-align: center;
