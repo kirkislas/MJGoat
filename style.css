@@ -125,7 +125,7 @@ section {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -175px; /* Adjust this value as needed */
+  bottom: -165px; /* Adjust this value as needed */
   left: 0;
   right: 0;
 }
@@ -136,7 +136,7 @@ section {
   animation: animateDown infinite 1.5s;
   padding: 0; /* Remove any padding */
   border: none; /* Remove any border */
-  /* Removed margin-left and margin-right */
+  fill: #ce1141;
 }
 
 @keyframes animateDown {
