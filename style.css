@@ -31,6 +31,7 @@ p {
 .banner .content {
   max-width: 900px;
   text-align: center;
+  position: relative;
 }
 
 .banner .content h2 {
@@ -120,6 +121,12 @@ section {
   width: 48%;
 }
 
+.banner .content .downArrow {
+  width: 100%; /* Ensures full width */
+  position: absolute;
+  bottom: -20px; /* Adjust as needed */
+}
+
 .banner .content .downArrow img {
   height: 40px;
   overflow-x: hidden;
@@ -127,7 +134,10 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  position: absolute; /* Position the arrow absolutely within .content */
+  left: 50%; /* Center horizontally */
+  bottom: -20px; /* Adjust this value to position the arrow */
+  transform: translateX(-50%); /* Adjust for the center alignment */
 }
 
 @keyframes animateDown {
