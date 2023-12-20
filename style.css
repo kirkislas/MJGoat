@@ -120,7 +120,7 @@ section {
   width: 48%;
 }
 
-.downArrow {
+.banner .downArrow img {
   height: 40px;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
