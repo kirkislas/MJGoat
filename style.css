@@ -122,6 +122,10 @@ section {
   font-weight: 300;
 }
 
+.about .row .col50 {
+  align-items: center;
+}
+
 .titleText span {
   color: #ce1141;
   font-weight: 700;
