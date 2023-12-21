@@ -182,8 +182,31 @@ window.addEventListener("click", function (event) {
     closeModal();
   }
 });
+
 window.addEventListener("touchstart", function (event) {
   if (event.target == modal) {
     closeModal();
   }
+});
+
+// New functionality for video thumbnails
+document.querySelectorAll(".victims .imgBx").forEach(function (container) {
+  var video = container.querySelector("video");
+  var thumbnail = container.querySelector(".video-thumbnail");
+
+  // Function to remove the thumbnail
+  function removeThumbnail() {
+    if (thumbnail) {
+      thumbnail.style.display = "none";
+    }
+  }
+
+  // Remove the thumbnail once the video starts playing
+  video.addEventListener("play", removeThumbnail);
+
+  // Optional: remove thumbnail on click if video doesn't autoplay
+  thumbnail.addEventListener("click", function () {
+    removeThumbnail();
+    video.play();
+  });
 });
