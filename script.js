@@ -63,17 +63,7 @@ function onSubmit(event) {
   }
 
   if (validateForm()) {
-    handleSubmit(event)
-      .then((response) => {
-        if (response.ok) {
-          grecaptcha.reset(); // Reset reCAPTCHA on successful submission
-        } else {
-          alert("Form submission was unsuccessful.");
-        }
-      })
-      .catch((error) => {
-        alert("An error occurred while submitting the form.");
-      });
+    handleSubmit(event);
   }
 }
 
@@ -93,6 +83,7 @@ async function handleSubmit(event) {
     if (response.ok) {
       status.innerHTML = "Thanks for your submission!";
       event.target.reset();
+      grecaptcha.reset();
     } else {
       const responseData = await response.json();
       if (responseData.errors) {
