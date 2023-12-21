@@ -129,7 +129,7 @@ section {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -155px; /* Adjust this value as needed */
+  bottom: -155px;
   left: 0;
   right: 0;
 }
@@ -138,9 +138,8 @@ section {
   height: 40px;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
-  padding: 0; /* Remove any padding */
-  border: none; /* Remove any border */
-  /* fill: #ce1141;*/
+  padding: 0;
+  border: none;
 }
 
 @keyframes animateDown {
@@ -248,7 +247,6 @@ section {
   text-align: center;
 }
 
-/* CSS for the modal */
 .modal {
   position: fixed;
   z-index: 1000;
@@ -404,6 +402,17 @@ section {
   font-weight: 600;
 }
 
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* Adjust size as needed */
+  color: white; /* Adjust color as needed */
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above the thumbnail */
+}
+
 .contact {
   background: url(images/jordan-bg3.png);
   background-size: cover;
@@ -414,7 +423,6 @@ section {
 .contactForm {
   padding: 75px 50px;
   background: #fff;
-  /* box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1); */
   max-width: 500px;
   margin-top: 50px;
 }

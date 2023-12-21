@@ -193,20 +193,25 @@ window.addEventListener("touchstart", function (event) {
 document.querySelectorAll(".victims .imgBx").forEach(function (container) {
   var video = container.querySelector("video");
   var thumbnail = container.querySelector(".video-thumbnail");
+  var playButton = container.querySelector(".play-button");
 
   // Function to remove the thumbnail
-  function removeThumbnail() {
+  function removeThumbnailAndPlay() {
     if (thumbnail) {
       thumbnail.style.display = "none";
     }
+    if (playButton) {
+      playButton.style.display = "none";
+    }
+    video.play();
   }
 
-  // Remove the thumbnail once the video starts playing
-  video.addEventListener("play", removeThumbnail);
+  // Remove the thumbnail and play button, then play the video
+  playButton.addEventListener("click", removeThumbnailAndPlay);
 
-  // Optional: remove thumbnail on click if video doesn't autoplay
+  // Optional: remove thumbnail and play button on click if video doesn't autoplay
   thumbnail.addEventListener("click", function () {
-    removeThumbnail();
+    removeThumbnailAndPlay();
     video.play();
   });
 });
