@@ -422,7 +422,7 @@ section {
   background-color: #ce1141; /* Background color of the circle */
   border-radius: 50%; /* Makes the background a circle */
   position: relative;
-  padding: 10px; /* Adjust padding if needed */
+  left: 5px;
 }
 
 .play-button i {
