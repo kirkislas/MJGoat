@@ -413,6 +413,11 @@ section {
   z-index: 10; /* Ensure it's above the thumbnail */
 }
 
+.play-button i {
+  color: inherit;
+  font-size: inherit;
+}
+
 .contact {
   background: url(images/jordan-bg3.png);
   background-size: cover;
