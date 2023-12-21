@@ -63,7 +63,17 @@ function onSubmit(event) {
   }
 
   if (validateForm()) {
-    handleSubmit(event);
+    handleSubmit(event)
+      .then((response) => {
+        if (response.ok) {
+          grecaptcha.reset(); // Reset reCAPTCHA on successful submission
+        } else {
+          alert("Form submission was unsuccessful.");
+        }
+      })
+      .catch((error) => {
+        alert("An error occurred while submitting the form.");
+      });
   }
 }
 
@@ -71,38 +81,33 @@ async function handleSubmit(event) {
   var status = document.getElementById("formStatus");
   var data = new FormData(event.target);
 
-  fetch(event.target.action, {
-    method: "POST",
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
-        event.target.reset();
-      } else {
-        response
-          .json()
-          .then((data) => {
-            if (data.errors) {
-              status.innerHTML = data.errors
-                .map((error) => error.message)
-                .join(", ");
-            } else {
-              status.innerHTML =
-                "Oops! There was a problem submitting your form";
-            }
-          })
-          .catch(() => {
-            status.innerHTML = "Oops! There was a problem submitting your form";
-          });
-      }
-    })
-    .catch((error) => {
-      status.innerHTML = "Oops! There was a problem submitting your form";
+  try {
+    const response = await fetch(event.target.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
     });
+
+    if (response.ok) {
+      status.innerHTML = "Thanks for your submission!";
+      event.target.reset();
+    } else {
+      const responseData = await response.json();
+      if (responseData.errors) {
+        status.innerHTML = responseData.errors
+          .map((error) => error.message)
+          .join(", ");
+      } else {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+      }
+    }
+  } catch (error) {
+    status.innerHTML = "Oops! There was a problem submitting your form";
+  }
+
+  return response;
 }
 
 document
