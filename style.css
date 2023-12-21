@@ -50,6 +50,10 @@ p {
   margin-top: -25px;
 }
 
+#content .content {
+  margin-bottom: 10px;
+}
+
 header {
   position: fixed;
   top: 0;
