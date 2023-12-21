@@ -416,6 +416,8 @@ section {
 .play-button i {
   color: inherit;
   font-size: inherit;
+  text-shadow: -1px -1px 0 #ce1141, /* Red stroke */ 1px -1px 0 #ce1141,
+    -1px 1px 0 #ce1141, 1px 1px 0 #ce1141;
 }
 
 .contact {
