@@ -181,7 +181,6 @@ document.querySelectorAll(".victims .imgBx").forEach(function (container) {
   var video = container.querySelector("video");
   var thumbnail = container.querySelector(".video-thumbnail");
   var playButton = container.querySelector(".play-button");
-
   function removeThumbnailAndPlay() {
     if (thumbnail) {
       thumbnail.style.display = "none";
@@ -193,7 +192,6 @@ document.querySelectorAll(".victims .imgBx").forEach(function (container) {
   }
 
   playButton.addEventListener("click", removeThumbnailAndPlay);
-
   thumbnail.addEventListener("click", function () {
     removeThumbnailAndPlay();
     video.play();
