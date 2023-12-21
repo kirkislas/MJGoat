@@ -42,7 +42,7 @@ function validateForm() {
     );
   }
   if ([name, email, message].some(containsProhibitedWord)) {
-    showError("Lebron submissions are prohibited");
+    showError("Lebron submissions are not good enough");
     return false;
   }
   return true;
