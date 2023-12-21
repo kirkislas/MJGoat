@@ -411,13 +411,20 @@ section {
   color: white; /* Adjust color as needed */
   cursor: pointer;
   z-index: 10; /* Ensure it's above the thumbnail */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Diameter of the circle */
+  height: 60px; /* Diameter of the circle */
+  background-color: #ce1141; /* Background color of the circle */
+  border-radius: 50%; /* Makes the background a circle */
+  padding: 5px; /* Adjust padding if needed */
 }
 
 .play-button i {
   color: inherit;
   font-size: inherit;
-  text-shadow: -1px -1px 0 #ce1141, /* Red stroke */ 1px -1px 0 #ce1141,
-    -1px 1px 0 #ce1141, 1px 1px 0 #ce1141;
 }
 
 .contact {
