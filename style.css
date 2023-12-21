@@ -422,7 +422,6 @@ section {
   background-color: #ce1141; /* Background color of the circle */
   border-radius: 50%; /* Makes the background a circle */
   position: relative;
-  left: 5px;
 }
 
 .play-button i {
@@ -430,6 +429,7 @@ section {
   font-size: inherit;
   position: relative;
   z-index: 11;
+  right: -1px;
 }
 
 .contact {

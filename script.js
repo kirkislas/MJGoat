@@ -145,38 +145,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Loop through all images and bind the click event
 document.querySelectorAll(".modalImage").forEach(function (img) {
   img.addEventListener("click", function () {
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt; // Use the 'alt' attribute as the caption
+    captionText.innerHTML = this.alt; //
   });
 });
 
-// Function to close the modal
 function closeModal() {
   modal.style.display = "none";
 }
 
-// When the user clicks on <span> (x), close the modal
 span.addEventListener("click", closeModal);
 span.addEventListener("touchstart", closeModal);
 
-// When the user clicks on the modal image, close the modal
 modalImg.addEventListener("click", closeModal);
 
-// When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function (event) {
   if (event.target == modal) {
     closeModal();
@@ -189,13 +181,11 @@ window.addEventListener("touchstart", function (event) {
   }
 });
 
-// New functionality for video thumbnails
 document.querySelectorAll(".victims .imgBx").forEach(function (container) {
   var video = container.querySelector("video");
   var thumbnail = container.querySelector(".video-thumbnail");
   var playButton = container.querySelector(".play-button");
 
-  // Function to remove the thumbnail
   function removeThumbnailAndPlay() {
     if (thumbnail) {
       thumbnail.style.display = "none";
@@ -206,10 +196,8 @@ document.querySelectorAll(".victims .imgBx").forEach(function (container) {
     video.play();
   }
 
-  // Remove the thumbnail and play button, then play the video
   playButton.addEventListener("click", removeThumbnailAndPlay);
 
-  // Optional: remove thumbnail and play button on click if video doesn't autoplay
   thumbnail.addEventListener("click", function () {
     removeThumbnailAndPlay();
     video.play();
