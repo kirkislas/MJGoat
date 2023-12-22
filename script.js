@@ -119,18 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const videos = document.querySelectorAll("video");
 
   videos.forEach(function (video) {
-    video.setAttribute("autoplay", "");
-    video.setAttribute("muted", "");
-    video.setAttribute("loop", "");
-
-    video
-      .play()
-      .then(() => {
-        console.log("Autoplay started!");
-      })
-      .catch((error) => {
-        console.error("Error trying to autoplay video: ", error);
-      });
+    // Listener for play/pause on click
     video.addEventListener("click", function () {
       if (video.paused) {
         video.play();
@@ -138,6 +127,17 @@ document.addEventListener("DOMContentLoaded", function () {
         video.pause();
       }
     });
+
+    // Attempt to play the video automatically
+    video
+      .play()
+      .then(() => {
+        console.log("Autoplay started!");
+      })
+      .catch((error) => {
+        console.log("Autoplay was prevented. Click to play.");
+        // Autoplay was prevented. You might want to show a play button here.
+      });
   });
 });
 
