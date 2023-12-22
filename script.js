@@ -115,31 +115,6 @@ document
     }
   });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const videos = document.querySelectorAll("video");
-
-  /* videos.forEach(function (video) {
-    // Listener for play/pause on click
-    video.addEventListener("click", function () {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }); */
-
-  // Attempt to play the video automatically
-  video
-    .play()
-    .then(() => {
-      console.log("Autoplay started!");
-    })
-    .catch((error) => {
-      console.log("Autoplay was prevented. Click to play.");
-      // Autoplay was prevented. You might want to show a play button here.
-    });
-});
-
 var modal = document.getElementById("myModal");
 
 var modalImg = document.getElementById("img01");
@@ -176,23 +151,39 @@ window.addEventListener("touchstart", function (event) {
   }
 });
 
-document.querySelectorAll(".victims .imgBx").forEach(function (container) {
-  var video = container.querySelector("video");
-  var thumbnail = container.querySelector(".video-thumbnail");
-  var playButton = container.querySelector(".play-button");
-  function removeThumbnailAndPlay() {
+document.addEventListener("DOMContentLoaded", function () {
+  // Handle autoplay and user interactions for videos in '.victims .imgBx'
+  const videoContainers = document.querySelectorAll(".victims .imgBx");
+
+  videoContainers.forEach(function (container) {
+    var video = container.querySelector("video");
+    var thumbnail = container.querySelector(".video-thumbnail");
+    var playButton = container.querySelector(".play-button");
+
+    function removeThumbnailAndPlay() {
+      if (thumbnail) {
+        thumbnail.style.display = "none";
+      }
+      if (playButton) {
+        playButton.style.display = "none";
+      }
+      video.play();
+    }
+
     if (thumbnail) {
-      thumbnail.style.display = "none";
+      thumbnail.addEventListener("click", removeThumbnailAndPlay);
     }
     if (playButton) {
-      playButton.style.display = "none";
+      playButton.addEventListener("click", removeThumbnailAndPlay);
     }
-    video.play();
-  }
 
-  playButton.addEventListener("click", removeThumbnailAndPlay);
-  thumbnail.addEventListener("click", function () {
-    removeThumbnailAndPlay();
-    video.play();
+    video
+      .play()
+      .then(() => {
+        removeThumbnailAndPlay(); // Autoplay started, hide thumbnail and play button
+      })
+      .catch((error) => {
+        console.log("Autoplay was prevented. Click to play."); // Autoplay prevented
+      });
   });
 });
