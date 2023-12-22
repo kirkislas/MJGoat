@@ -118,7 +118,7 @@ document
 document.addEventListener("DOMContentLoaded", function () {
   const videos = document.querySelectorAll("video");
 
-  videos.forEach(function (video) {
+  /* videos.forEach(function (video) {
     // Listener for play/pause on click
     video.addEventListener("click", function () {
       if (video.paused) {
@@ -126,19 +126,18 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         video.pause();
       }
-    });
+    }); */
 
-    // Attempt to play the video automatically
-    video
-      .play()
-      .then(() => {
-        console.log("Autoplay started!");
-      })
-      .catch((error) => {
-        console.log("Autoplay was prevented. Click to play.");
-        // Autoplay was prevented. You might want to show a play button here.
-      });
-  });
+  // Attempt to play the video automatically
+  video
+    .play()
+    .then(() => {
+      console.log("Autoplay started!");
+    })
+    .catch((error) => {
+      console.log("Autoplay was prevented. Click to play.");
+      // Autoplay was prevented. You might want to show a play button here.
+    });
 });
 
 var modal = document.getElementById("myModal");
