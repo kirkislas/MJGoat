@@ -561,7 +561,7 @@ section {
 }
 
 p#formStatus {
-  width: 500px;
+  width: 250px;
 }
 
 @media (max-width: 991px) {
