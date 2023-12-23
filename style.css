@@ -474,7 +474,7 @@ section {
 }
 
 .contactForm {
-  padding: 75px 50px 25px;
+  padding: 75px 50px 20px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
@@ -493,7 +493,7 @@ section {
 .contactForm .inputBox {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .contactForm .inputBox input,
