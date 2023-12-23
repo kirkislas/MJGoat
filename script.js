@@ -82,7 +82,7 @@ async function handleSubmit(event) {
     });
 
     if (response.ok) {
-      status.innerHTML = "Thanks for your submission!";
+      status.innerHTML = "Thank you for your submission!";
       status.className = "success"; // Add success class
       event.target.reset();
       grecaptcha.reset();
