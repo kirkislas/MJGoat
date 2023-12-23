@@ -83,9 +83,13 @@ async function handleSubmit(event) {
 
     if (response.ok) {
       status.innerHTML = "Thank you for your submission!";
-      status.className = "success"; // Add success class
+      status.className = "success";
       event.target.reset();
       grecaptcha.reset();
+      setTimeout(function () {
+        status.innerHTML = "";
+        status.className = "";
+      }, 5000);
     } else {
       const responseData = await response.json();
       if (responseData.errors) {
@@ -95,11 +99,11 @@ async function handleSubmit(event) {
       } else {
         status.innerHTML = "Oops! There was a problem submitting your form";
       }
-      status.className = "error"; // Add error class
+      status.className = "error";
     }
   } catch (error) {
     status.innerHTML = "Oops! There was a problem submitting your form";
-    status.className = "error"; // Add error class
+    status.className = "error";
   }
 
   return response;
@@ -156,7 +160,6 @@ window.addEventListener("touchstart", function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Handle autoplay and user interactions for videos in '.victims .imgBx'
   const videoContainers = document.querySelectorAll(".victims .imgBx");
 
   videoContainers.forEach(function (container) {
@@ -184,10 +187,10 @@ document.addEventListener("DOMContentLoaded", function () {
     video
       .play()
       .then(() => {
-        removeThumbnailAndPlay(); // Autoplay started, hide thumbnail and play button
+        removeThumbnailAndPlay();
       })
       .catch((error) => {
-        console.log("Autoplay was prevented. Click to play."); // Autoplay prevented
+        console.log("Autoplay was prevented. Click to play.");
       });
   });
 });
