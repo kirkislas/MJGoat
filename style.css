@@ -554,7 +554,7 @@ section {
 
 #formStatus {
   color: #d9534f;
-  max-width: 80%;
+  width: 100%;
   text-align: center;
   margin: auto;
 }
@@ -683,7 +683,7 @@ section {
     -webkit-transform-origin: 0 0;
   }
   #formStatus {
-    max-width: 90%;
+    width: 100%;
     text-align: center;
     margin: auto;
   }
