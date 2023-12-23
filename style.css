@@ -469,12 +469,16 @@ section {
   padding-bottom: 0;
 }
 
+#contact {
+  padding-bottom: 60px;
+}
+
 .contactForm {
   padding: 50px 30px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .contactForm h3 {
