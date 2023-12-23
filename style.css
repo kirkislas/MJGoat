@@ -688,15 +688,19 @@ p#formStatus {
     -webkit-transform-origin: 0 0;
   }
   #formStatus {
-    margin-bottom: 3px;
-    width: 220px;
+    width: 100%;
     font-size: 15px;
     text-align: center;
+    margin: auto;
+    padding: 0;
   }
   #contact {
     padding-bottom: 3px;
   }
   .contactForm {
     margin-bottom: 5px;
+  }
+  #contactForm {
+    text-align: center;
   }
 }
