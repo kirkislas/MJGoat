@@ -139,7 +139,7 @@ header .navigation li a:hover {
 }
 
 section {
-  padding: 168px;
+  padding: 50px;
 }
 
 .row {
@@ -466,10 +466,11 @@ section {
   background-size: cover;
   max-width: 100%;
   height: auto;
+  padding-bottom: 0;
 }
 
 .contactForm {
-  padding: 75px 50px;
+  padding: 50px 30px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
