@@ -474,7 +474,7 @@ section {
 }
 
 .contactForm {
-  padding: 75px 50px 10px;
+  padding: 75px 20px 10px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
@@ -554,8 +554,9 @@ section {
 
 #formStatus {
   color: #d9534f;
-  width: 100%;
+  max-width: 80%;
   text-align: center;
+  margin: auto;
 }
 
 @media (max-width: 991px) {
@@ -682,8 +683,9 @@ section {
     -webkit-transform-origin: 0 0;
   }
   #formStatus {
-    width: 100%;
+    max-width: 90%;
     text-align: center;
+    margin: auto;
   }
   #contact {
     padding-bottom: 3px;
