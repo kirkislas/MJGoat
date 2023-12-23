@@ -474,11 +474,13 @@ section {
 }
 
 .contactForm {
-  padding: 50px 30px;
+  padding: 75px 50px 100px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: coulumn;
 }
 
 .contactForm h3 {
