@@ -554,15 +554,8 @@ section {
 
 #formStatus {
   color: #d9534f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   text-align: center;
-}
-
-p#formStatus {
-  width: 500px;
 }
 
 @media (max-width: 991px) {
@@ -689,9 +682,6 @@ p#formStatus {
     -webkit-transform-origin: 0 0;
   }
   #formStatus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     text-align: center;
   }
