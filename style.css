@@ -76,7 +76,7 @@ footer {
 
 #contact {
   margin-bottom: 0;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 header {
@@ -474,7 +474,7 @@ section {
 }
 
 .contactForm {
-  padding: 75px 50px 50px;
+  padding: 75px 50px 25px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
