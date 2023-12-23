@@ -76,7 +76,7 @@ footer {
 
 #contact {
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 header {
@@ -470,7 +470,7 @@ section {
 }
 
 #contact {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .contactForm {
@@ -478,7 +478,7 @@ section {
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -672,7 +672,7 @@ p#formStatus {
   .contactForm {
     padding: 35px 40px 10px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 
@@ -689,5 +689,11 @@ p#formStatus {
   }
   #formStatus {
     margin-bottom: 5px;
+  }
+  #contact {
+    padding-bottom: 10px;
+  }
+  .contactForm {
+    margin-bottom: 15px;
   }
 }
