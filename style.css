@@ -686,4 +686,7 @@ p#formStatus {
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
   }
+  .contactForm .inputBox {
+    margin-bottom: 30px;
+  }
 }
