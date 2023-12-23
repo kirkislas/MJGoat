@@ -51,6 +51,7 @@ function validateForm() {
 function showError(message) {
   var status = document.getElementById("formStatus");
   status.innerHTML = message;
+  status.className = "error";
 }
 
 function onSubmit(event) {
@@ -82,6 +83,7 @@ async function handleSubmit(event) {
 
     if (response.ok) {
       status.innerHTML = "Thanks for your submission!";
+      status.className = "success"; // Add success class
       event.target.reset();
       grecaptcha.reset();
     } else {
@@ -93,9 +95,11 @@ async function handleSubmit(event) {
       } else {
         status.innerHTML = "Oops! There was a problem submitting your form";
       }
+      status.className = "error"; // Add error class
     }
   } catch (error) {
     status.innerHTML = "Oops! There was a problem submitting your form";
+    status.className = "error"; // Add error class
   }
 
   return response;

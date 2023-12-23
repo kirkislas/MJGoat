@@ -558,6 +558,14 @@ section {
   margin: auto;
 }
 
+#formStatus.success {
+  color: #28a745;
+}
+
+#formStatus.error {
+  color: #d9534f;
+}
+
 @media (max-width: 991px) {
   header,
   header.sticky {
