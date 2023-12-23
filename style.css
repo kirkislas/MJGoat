@@ -44,12 +44,11 @@ body {
 }
 
 footer {
-  text-align: center; /* Center the text horizontally */
-  width: 100%; /* Make the footer extend full width */
-  padding: 5px 0; /* Add some padding for spacing */
-  background-color: #fff; /* Optional: Background color */
-  color: #333; /* Text color */
-  /* Additional styles as needed */
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+  background-color: #fff;
+  color: #333;
 }
 
 .content {
@@ -436,20 +435,20 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px; /* Adjust size as needed */
-  color: white; /* Adjust color as needed */
+  font-size: 30px;
+  color: white;
   cursor: pointer;
-  z-index: 10; /* Ensure it's above the thumbnail */
+  z-index: 10;
 }
 
 .circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px; /* Diameter of the circle */
-  height: 60px; /* Diameter of the circle */
-  background-color: #ce1141; /* Background color of the circle */
-  border-radius: 50%; /* Makes the background a circle */
+  width: 60px;
+  height: 60px;
+  background-color: #ce1141;
+  border-radius: 50%;
   position: relative;
 }
 
@@ -524,7 +523,7 @@ section {
 }
 
 .copyrightText {
-  padding: 4px 40px; /* Reduced top and bottom padding */
+  padding: 4px 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
 }
