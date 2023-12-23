@@ -561,7 +561,7 @@ section {
 }
 
 p#formStatus {
-  width: 250px;
+  width: 500px;
 }
 
 @media (max-width: 991px) {
@@ -689,6 +689,7 @@ p#formStatus {
   }
   #formStatus {
     margin-bottom: 3px;
+    width: 250px;
   }
   #contact {
     padding-bottom: 3px;
