@@ -481,8 +481,6 @@ section {
   margin-bottom: 5px;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .contactForm h3 {
