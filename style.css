@@ -474,7 +474,7 @@ section {
 }
 
 .contactForm {
-  padding: 75px 50px 20px;
+  padding: 75px 50px 10px;
   background: #fff;
   max-width: 500px;
   margin-top: 50px;
@@ -493,7 +493,7 @@ section {
 .contactForm .inputBox {
   position: relative;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .contactForm .inputBox input,
@@ -554,9 +554,10 @@ section {
 
 #formStatus {
   color: #d9534f;
-  margin-top: -20px;
+  margin-top: 0;
   height: 20px;
   padding: 5px;
+  margin-bottom: 10px;
 }
 
 p#formStatus {
@@ -686,7 +687,7 @@ p#formStatus {
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
   }
-  .contactForm .inputBox {
-    margin-bottom: 30px;
+  #formStatus {
+    margin-bottom: 10px;
   }
 }
