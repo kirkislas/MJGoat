@@ -554,10 +554,11 @@ section {
 
 #formStatus {
   color: #d9534f;
-  margin-top: 0;
-  height: 20px;
-  padding: 5px;
-  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 p#formStatus {
@@ -688,11 +689,11 @@ p#formStatus {
     -webkit-transform-origin: 0 0;
   }
   #formStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    font-size: 15px;
     text-align: center;
-    margin: auto;
-    padding: 0;
   }
   #contact {
     padding-bottom: 3px;
